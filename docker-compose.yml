@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        BUILD_DIR: build   # Vite ho to "dist"
+    ports:
+      - "3000:80"
+    restart: unless-stopped
